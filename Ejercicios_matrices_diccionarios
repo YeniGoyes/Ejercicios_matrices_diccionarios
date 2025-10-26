@@ -1,0 +1,306 @@
+#Ejercicios: problemas de arreglos 1
+#Ejercicio 1: algoritmo que calcule el promedio de un arreglo de reales
+
+def problema1():
+
+ p1 = int(input("Digíte la cantidad de números del arreglo: "))
+ suma = 0
+
+ for a in range(p1):
+    numero = float(input(f"Ingrese un número {a+1}: "))
+    suma += numero
+
+ promedio = suma / p1
+ print("El promedio es:", promedio)
+
+#Ejercicio 2: algoritmo que calcule el producto punto de dos arreglos en ́numeros enteros (reales) de igual tamano
+
+def problema2():
+
+ p2 = int(input("Digíte la cantidad de números de cada arreglo: "))
+ producto = 0
+
+ for e in range(p2):
+    v = float(input(f"Ingrese el número {e+1} del primer arreglo: "))
+    k = float(input(f"Ingrese el número {e+1} del segundo arreglo: "))
+    producto += v * k
+
+ print("El producto punto es:", producto)
+
+#Ejercicio 3: algoritmo que calcule el producto directo de dos arreglos de numeros reales de igual tamano
+
+def problema3():
+  
+ p3 = 2
+ resultado = []
+
+ for i in range(p3):
+    v = float(input(f"Ingrese el número {i+1} del primer arreglo: "))
+    k = float(input(f"Ingrese el núemro {i+1} del segundo arreglo: "))
+    resultado.append(v * k)
+
+ print("El producto directo es:", resultado)
+
+#problemas de arreglos 2
+#Ejercicio 1: algoritmo que determine la mediana de un arreglo de enteros
+
+def prob1():
+
+ p1 = int(input("Digíte la cantidad de números que tiene el arreglo:  "))
+ arreglo = []
+
+ for o in range(p1):
+    numero = int(input(f"Ingrese el número {o+1}: "))
+    arreglo.append(numero)
+
+ arreglo.sort()
+
+ if p1 % 2 == 1:
+  
+    mediana = arreglo[p1 // 2]
+ else:
+
+    medio1 = arreglo[p1 // 2 - 1]
+    medio2 = arreglo[p1 // 2]
+    mediana = (medio1 + medio2) / 2
+
+ print("Arreglo ordenado:", arreglo)
+ print("La mediana es:", mediana)
+
+#Ejercicio 2: algoritmo que deje al final de un arreglo de n ́umeros todos los ceros que aparezcan en dicho arreglo
+
+def prob2():
+   
+ p2 = int(input("Digíte la cantidad de números que tiene el arreglo: "))
+ arreglo = []
+
+ for u in range(p2):
+    numero = int(input(f"Ingrese el número {u+1}: "))
+    arreglo.append(numero)
+
+ s = []
+ c = 0
+
+ for numero in arreglo:
+    if numero != 0:
+        s.append(numero)
+    else:
+        c += 1
+
+ for a in range(c):
+    s.append(0)
+
+ print("Arreglo:", arreglo)
+ print("Arreglo con ceros al final:", s)
+
+#Problemad de matrices 1
+#ejercicio 1: algoritmo que permita sumar dos matrices de numeros reales 
+
+def ejercicio1():
+ f = int(input("Filas: "))
+ c = int(input("Columnas: "))
+
+ A, B, C = [], [], []
+
+ print("Matriz A:")
+ for a in range(f):
+    fila = [float(input(f"A[{a+1},{b+1}]: ")) for b in range(c)]
+    A.append(fila)
+
+ print("Matriz B:")
+ for a in range(f):
+    fila = [float(input(f"B[{a+1},{b+1}]: ")) for b in range(c)]
+    B.append(fila)
+
+ for a in range(f):
+    fila = []
+    for b in range(c):
+        fila.append(A[a][b] + B[a][b])
+    C.append(fila)
+
+ print("Resultado de la suma: ", C)
+
+#Ejercicio 2: algoritmo que permita multiplicar dos matrices de ́ umeros reales 
+
+def ejercicio2():
+   
+ f1 = int(input("Filas de A: "))
+ c1 = int(input("Columnas de A: "))
+ f2 = int(input("Filas de B: "))
+ c2 = int(input("Columnas de B: "))
+
+ if c1 != f2 :
+    print("No se puede")
+ else:
+    A, B, C = [], [], []
+
+    print("Matriz A:")
+    for e in range(f1):
+        A.append([float(input(f"A[{e+1},{d+1}]: ")) for d in range(c1)])
+
+    print("Matriz B:")
+    for e in range(f2):
+        B.append([float(input(f"B[{e+1},{d+1}]: ")) for d in range(c2)])
+
+    for e in range(f1):
+        fila = []
+        for d in range(c2):
+            s = 0
+            for g in range(c1):
+                s += A[e][g] * B[g][d]
+            fila.append(s)
+        C.append(fila)
+
+    print("Resultado de la multiplicaión: ", C)
+
+#Ejercicio 3:Desarrollar un programa que sume los elementos de una columna dada de una matriz
+
+def ejercicio3():
+   
+ f = int(input("Filas: "))
+ c = int(input("Columnas: "))
+ M = []
+
+ for i in range(f):
+    M.append([float(input(f"M[{i+1},{h+1}]: ")) for h in range(c)])
+
+ col = int(input("Número de columna: ")) - 1
+
+ suma = 0
+ for i in range(f):
+    suma += M[i][col]
+
+ print("Suma columna:", suma)
+
+#Ejercicio4: programa que sume los elementos de una fila dada de una matriz
+
+def ejercicio4():
+   
+ f = int(input("Filas: "))
+ c = int(input("Columnas: "))
+ M = []
+
+ for u in range(f):
+    M.append([float(input(f"M[{u+1},{j+1}]: ")) for j in range(c)])
+
+ fila = int(input("Número de fila: ")) - 1
+
+ suma = 0
+ for j in range(c):
+    suma += M[fila][j]
+
+ print("Suma fila:", suma)
+
+#Ejercicio5: algoritmo que determine si una matriz es mágica
+
+def ejercicio5():
+   
+ t = int(input("Tamaño de matriz: "))
+ M = []
+
+ for a in range(t):
+    fila = []
+    for k in range(t):
+        valor = int(input(f"Elemento [{a+1},{k+1}]: "))
+        fila.append(valor)
+    M.append(fila)
+
+ suma_ref = sum(M[0])
+ magica = True
+
+ for i in range(t):
+    if sum(M[a]) != suma_ref:
+        magica = False
+    else:
+        magica = magica 
+
+ for k in range(t):
+    suma_col = 0
+    for a in range(t):
+        suma_col += M[a][k]
+    if suma_col != suma_ref:
+        magica = False
+
+ suma_diag1 = 0
+ suma_diag2 = 0
+ for i in range(t):
+    suma_diag1 += M[a][a]
+    suma_diag2 += M[a][t - 1 - a]
+
+ if suma_diag1 != suma_ref or suma_diag2 != suma_ref:
+    magica = False
+
+ if magica == True:  
+    print("La matriz es mágica.")
+ else:
+    print("La matriz NO es mágica.")
+
+#Problemas de diccionarios 1
+#Ejercicio 1: un algoritmo que imprima de manera ascendente los valores
+
+def ejerc1():
+ 
+ d = {"a": 8, "b": 3, "c": 5}
+ valores = list(d.values())
+ valores.sort()
+ print("Valores ascendentes:", valores)
+
+#Ejercicio 2: algoritmo que verifique si todas las clave:valor de un diccionario se encuentran en otro diccionario
+
+def ejerc2():
+ d1 = {"a": 1, "b": 2}
+ d2 = {"a": 1, "b": 2, "c": 3}
+
+ contenido = True
+ for i in d1:
+    if i not in d2 or d1[i] != d2[i]:
+        contenido = False
+
+ print(contenido)
+
+#Ejercicio 3: Función que reciba dos diccionarios como parámetros y los mezcle
+
+def ejerc3():
+   
+ def mezclar(di1, di2):
+    nuevo = di2.copy()
+    for e in di1:
+        nuevo[e] = di1[e]
+    return nuevo
+
+ a = {"x": 1, "y": 2}
+ b = {"y": 9, "z": 3}
+ print("mezclado:", mezclar(a, b))
+
+#Ejercicio 4: Progrma que dada una lista de personas imprima los nombres y apellidos de las personas que están en un rango de edades
+
+def ejerc4():
+ personas = [
+    {"nombres": "Andrés Santiago", "apellidos": "Solano Goyes", "edad": 48},
+    {"nombres": "Nanci", "apellidos": "Palacios", "edad": 15},
+    {"nombres": "Andrea", "apellidos": "Goyes", "edad": 24}
+ ]
+
+ min_edad = int(input("Edad mínima: "))
+ max_edad = int(input("Edad máxima: "))
+
+ for p in personas:
+    if p["edad"] >= min_edad and p["edad"] <= max_edad:
+        print(p["nombres"], p["apellidos"])
+    else:
+        p = p  
+
+problema1()
+problema2()
+problema3()
+prob1()
+prob2()
+ejercicio1()
+ejercicio2()
+ejercicio3()
+ejercicio4()
+ejercicio5()
+ejerc1()
+ejerc2()
+ejerc3()
+ejerc4()
