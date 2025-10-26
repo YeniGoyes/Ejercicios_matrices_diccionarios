@@ -208,7 +208,7 @@ def ejercicio5():
  suma_ref = sum(M[0])
  magica = True
 
- for i in range(t):
+ for a in range(t):
     if sum(M[a]) != suma_ref:
         magica = False
     else:
@@ -218,12 +218,12 @@ def ejercicio5():
     suma_col = 0
     for a in range(t):
         suma_col += M[a][k]
-    if suma_col != suma_ref:
+ if suma_col != suma_ref:
         magica = False
 
  suma_diag1 = 0
  suma_diag2 = 0
- for i in range(t):
+ for a in range(t):
     suma_diag1 += M[a][a]
     suma_diag2 += M[a][t - 1 - a]
 
