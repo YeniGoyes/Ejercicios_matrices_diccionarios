@@ -42,3 +42,19 @@
 
 <img width="164" height="160" alt="image" src="https://github.com/user-attachments/assets/7fe1c2a9-f68d-48eb-b594-1ffab2e00b8b" />
 
+## Problemas de diccionarios 1
+### Problema 1
+
+<img width="202" height="14" alt="image" src="https://github.com/user-attachments/assets/1eb231f3-fc29-4b52-a438-7db3fac406ef" />
+
+### Problema 2
+
+<img width="71" height="13" alt="image" src="https://github.com/user-attachments/assets/31345281-063a-403a-9b1a-32706bf66f08" />
+
+### Problema 3
+
+<img width="251" height="17" alt="image" src="https://github.com/user-attachments/assets/9cd6e512-50a3-4faa-8d84-a492251b97c0" />
+
+### Problema 4
+
+<img width="132" height="55" alt="image" src="https://github.com/user-attachments/assets/a1e10e7f-2dce-4af2-bcbd-4896bb54b4cb" />
